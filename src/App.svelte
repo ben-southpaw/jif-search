@@ -1,7 +1,8 @@
 <script>
+
 	let search;
 	let loading = false;
-	const API_URL = 'https://api.giphy.com/v1/gifs/search?api_key=JnxTmEGKXjZeUKBzRjTQoMDg8OX8pS5U&rating=pg&q=';
+	const API_URL = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&rating=pg&q=`;
 
 	let gifs = [];
 
