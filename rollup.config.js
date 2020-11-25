@@ -5,6 +5,7 @@ import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import css from 'rollup-plugin-css-only';
 import replace from '@rollup/plugin-replace';
+import autoPreprocess from 'svelte-preprocess';
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -49,7 +50,8 @@ export default {
 			// enable run-time checks when not in production
 			compilerOptions: {
 				dev: !production
-			}
+			},
+			preprocess: autoPreprocess()
 		}),
 		// we'll extract any component CSS out into
 		// a separate file - better for performance

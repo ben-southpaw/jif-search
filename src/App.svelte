@@ -6,9 +6,7 @@
 
 	let gifs = [];
 
-
-	async function formSubmitted(event) {
-		event.preventDefault();
+	async function formSubmitted() {
 		loading = true;
 		gifs = []; //reset array on new search
 		const url = `${API_URL}${search}`;
@@ -17,9 +15,10 @@
 		gifs = json.data.map(gif => gif.images.fixed_height.url);
 		loading = false;
 	}
+
 </script>
 
-<form action="" on:submit={formSubmitted}>
+<form action="" on:submit|preventDefault={formSubmitted}>
 	<label for="search">Search</label>
 	<input bind:value={search} id="search" name="search" />
 	<button type="submit">Go</button>
@@ -35,15 +34,32 @@
 </div>
 
 
-<style>
-	.results {
-		column-count: 3;
+<style lang="scss">
+
+	form {
+		text-align: center;
+		margin: 5%;
+		label {
+			display: block;
+		}
+		button {
+			display: block;
+			width: 5em;
+			margin: auto;
+			margin-top: 1em;
+		}
 	}
 
-	img {
-		width: 100%;
-		height: auto;
+
+	.results {
+		column-count: 3;
+		img {
+			width: 100%;
+			height: auto;
+		}
 	}
+
+
 
 	@media (min-width: 640px) {
 		main {
