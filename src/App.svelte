@@ -1,5 +1,4 @@
 <script>
-
 	let search;
 	let loading = false;
 	const API_URL = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&rating=pg&q=`;
@@ -61,9 +60,9 @@
 
 
 
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
+	//@media (min-width: 640px) {
+	//	main {
+	//		max-width: none;
+	//	}
+	//}
 </style>

@@ -1,21 +1,18 @@
 {
   "name": "svelte-app",
   "version": "1.0.0",
+  "license": "MIT",
   "scripts": {
-    "build": "rollup -c",
+    "build": "build-storybook -c .storybook -o public",
     "dev": "rollup -c -w",
-    "start": "sirv public",
-    "storybook": "start-storybook",
-    "build": "build-storybook -c .storybook -o public"
+    "start": "sirv public"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@rollup/plugin-commonjs": "^16.0.0",
     "@rollup/plugin-node-resolve": "^10.0.0",
     "@rollup/plugin-replace": "^2.3.4",
-    "@storybook/svelte": "^6.1.6",
     "babel-loader": "^8.2.1",
-    "postcss": "^8.1.10",
     "postcss-load-config": "^3.0.0",
     "rollup": "^2.3.4",
     "rollup-plugin-css-only": "^3.0.0",
@@ -27,10 +24,8 @@
     "svelte-preprocess": "^4.6.1"
   },
   "dependencies": {
-    "autoprefixer": "^10.0.2",
     "dotenv": "^8.2.0",
     "rollup-plugin-node-globals": "^1.4.0",
-    "sirv-cli": "^1.0.0",
-    "tailwindcss": "^2.0.1"
+    "sirv-cli": "^1.0.0"
   }
 }
